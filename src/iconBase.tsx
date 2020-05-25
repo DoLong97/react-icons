@@ -30,7 +30,7 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
 export type IconType = (props: IconBaseProps) => JSX.Element;
 export function IconBase(props:IconBaseProps & { attr: {} | undefined }): JSX.Element {
   const elem = (conf: IconContext) => {
-    const computedSize = props && props.size || conf && conf.size || "1em";
+    const computedSize = "1em";
     let className;
     if (conf && conf.className) className = conf.className;
     if (props && props.className) className = (className ? className + ' ' : '') + props.className;
